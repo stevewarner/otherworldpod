@@ -19,7 +19,7 @@ export const getPod = async () => {
   const fs = require('fs');
   const text = await res.text();
 
-  const { XMLParser, XMLBuilder, XMLValidator } = require('fast-xml-parser');
+  const { XMLParser } = require('fast-xml-parser');
 
   const parser = new XMLParser({
     ignoreAttributes: false,
@@ -36,15 +36,15 @@ const Episodes = async () => {
       {episodes.map((episode: Episode) => (
         <div
           key={episode.title}
-          className="mb-8 rounded-2xl border border-white p-4"
+          className="mb-8 rounded-2xl border border-white px-4 py-8"
         >
-          <div className="mb-2 flex items-baseline justify-between">
+          <div className="mb-4 flex items-baseline justify-between">
             <h1>{episode.title}</h1>
             <p>{new Date(episode.pubDate).toLocaleDateString('en-US')}</p>
           </div>
 
           <div
-            className="mb-2"
+            className="mb-4"
             dangerouslySetInnerHTML={{ __html: episode.description }}
           />
 
