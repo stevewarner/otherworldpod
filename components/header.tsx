@@ -17,8 +17,8 @@ const Header = () => (
 
     <nav className="flex justify-evenly text-2xl text-yellow">
       <Link href="#">Episodes</Link>
-      <Link href="#">Merch</Link>
-      <Link href="#">Patreon</Link>
+      <Link href="https://www.otherworldpod.com/">Merch</Link>
+      <Link href="https://www.patreon.com/Otherworld">Patreon</Link>
     </nav>
   </header>
 );
